@@ -1,11 +1,10 @@
 import { SocialLinks } from './about-section'
 
-export default function Footer() {
+export default function Footer({title,description} : {title: string; description: string}) {
   return (
     <footer className="text-stone-800 text-center space-y-4 py-10">
-      <p className="font-junicode text-3xl">Thanks for scrolling this far.</p>
-      <p className="text-sm">If you made it here, we probably have something to talk about. <br/>Whether it's redesigning a product, discussing UX, or just sharing ideas,
-      my inbox is always open.</p>
+      <p className="font-junicode text-3xl">{title}</p>
+      <p className="text-sm">{description}</p>
       <SocialLinks />
     </footer>
   );

@@ -4,8 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router"
 import './index.css'
 
 import  App  from './App.tsx'
-const Bibo = lazy(() => import('./pages/bibo.tsx'))
-
+import Projects from './projects.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/project">
-          <Route path="bibo" element={<Bibo />} />
+          <Route path=":id" element={<Projects />} />
         </Route>
       </Routes>
     </BrowserRouter>

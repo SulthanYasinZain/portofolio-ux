@@ -1,17 +1,17 @@
-import placeholderImg from '../assets/placeholder.webp';
+import { useNavigate } from "react-router";
 
 export default function WorkSection() {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-      <HoverCard imageurl={placeholderImg} name="Bibo" description="Lead Researcher | UI/UX Designer" />
-      <HoverCard imageurl={placeholderImg} name="Bibo" description="Lead Researcher | UI/UX Designer" />
+      <HoverCard imageurl='/bibo-thumbnail.webp' name="Bibo" description="Lead Researcher | UI/UX Designer" />
     </section>
   );
 }
 
-function HoverCard({imageurl, name, description} : {imageurl: string, name: string, description: string}) {
+function HoverCard({ imageurl, name, description }: { imageurl: string, name: string, description: string }) {
+  let navigate = useNavigate();
   return (
-    <div className="group relative w-full overflow-hidden rounded-xl hover:rounded-none cursor-pointer">
+    <div className="group relative w-full overflow-hidden rounded-xl hover:rounded-none cursor-pointer" onClick={() => {navigate('/project/bibo')}}>
         <img
           src={imageurl}
           alt="Project Showcase"
