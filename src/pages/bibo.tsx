@@ -3,186 +3,157 @@ import ImageViewer from '../components/image-viewer'
 
 export default function Bibo() {
   return (
-    <div className="px-8 bg-stone-100 h-full flex flex-col items-center w-full text-stone-800 text-sm">
-      <Header title="A Dyslexia-Friendly Reading Learning App for Children" />
+    <div className="min-h-screen w-full bg-stone-100 text-stone-800">
+      <Header title="A Dyslexia-Friendly Reading App for Children" />
 
-      <div className="max-w-xl w-full  space-y-8 py-8">
+      <main className="mx-auto w-full max-w-xl space-y-14 px-4 pb-20 pt-8 sm:space-y-20 sm:pb-28 sm:pt-12">
         <ImageViewer
           src="/bibo/bibo-banner.webp"
           alt="Bibo project overview"
           downloadName="bibo-project-overview.webp"
+          className="shadow-sm"
         />
-        <section className='space-y-2'>
-          <h2 className='text-2xl'>Overview</h2>
-          <p className=''>Bibo is a dyslexia-friendly reading app designed to help children develop reading skills through accessible and interactive learning experiences. The project combines research, accessibility principles, and usability testing to create a reading experience that is simple, engaging, and inclusive.</p>
-          <p className=''>
-            <strong>Editor's note:</strong> This is a condensed version of the original
-            case study, focusing on the most important research, design decisions, and
-            outcomes. If you'd like to explore the complete 30-page documentation, click{" "}
-            <a href="/bibo.pdf" className="underline">
-              here
-            </a>.
+
+        <section className="space-y-4">
+          <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Overview</h2>
+          <p className="text-base leading-7 text-stone-600">
+            Bibo is a mobile learning app designed to help children with dyslexia build
+            reading skills through accessible, interactive practice. Our team combined
+            research, accessibility principles, and usability testing to create an
+            experience that feels clear, encouraging, and easy to navigate.
           </p>
+
+          <dl className="grid grid-cols-3 divide-x divide-stone-200 rounded-xl border border-stone-200 bg-white/60 py-4 text-center">
+            <div className="px-2">
+              <dt className="text-xs text-stone-500">Timeline</dt>
+              <dd className="mt-1 font-medium">4 weeks</dd>
+            </div>
+            <div className="px-2">
+              <dt className="text-xs text-stone-500">Survey</dt>
+              <dd className="mt-1 font-medium">16 responses</dd>
+            </div>
+            <div className="px-2">
+              <dt className="text-xs text-stone-500">Testing</dt>
+              <dd className="mt-1 font-medium">25 participants</dd>
+            </div>
+          </dl>
         </section>
 
-        <section className='space-y-2'>
-          <h2 className='text-2xl'>Background</h2>
-          <p className=" text-muted-foreground">
-            The project was created for a one-month UI/UX competition under the theme "Smart Digital Solutions for Real-World Problems."
+        <section className="space-y-4">
+          <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Context</h2>
+          <p className="text-base leading-7 text-stone-600">
+            Bibo was developed during a four-week UI/UX competition under the theme
+            “Smart Digital Solutions for Real-World Problems.” We chose the Digital
+            Education Innovation subtheme after finding that few learning tools
+            addressed the reading needs of children with dyslexia while also helping
+            parents understand their progress.
           </p>
-          <p className="">
-            Our team selected the Digital Education Innovation subtheme after identifying a lack of digital learning tools designed specifically for children with dyslexia. Existing solutions often overlooked accessibility and provided little support for parents to monitor learning progress.
-          </p>
-
         </section>
 
         <section className="space-y-6">
-          <h2 className="text-2xl">Design Process</h2>
-
-          <p className="">
-            Working within a four-week competition timeline, our goal was to understand
-            the needs of children with dyslexia and translate those insights into an
-            accessible learning experience.
-          </p>
-
-          <p className="">
-            We followed a user-centered design process, beginning with research and
-            problem discovery, before defining user needs, designing the interface,
-            building an interactive prototype, and validating the solution through
-            usability testing.
-          </p>
-
-          <div>
-            <h3 className='font-medium'>Week 1 · Discover</h3>
-            <ul className='list-disc pl-6'>
-              <li>Conducted secondary research on dyslexia and reading accessibility.</li>
-              <li>Reviewed existing educational applications and identified usability gaps.</li>
-              <li>Explored accessibility guidelines and dyslexia-friendly design principles.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className='font-medium'>Week 2 · Define</h3>
-            <ul className='list-disc pl-6'>
-              <li>Collected responses from 16 survey participants to understand learning habits and challenges.</li>
-              <li>Synthesized research findings through affinity mapping.</li>
-              <li>Created personas, user journeys, and information architecture.</li>
-              <li>Defined the problem statement and prioritized core features.</li>
-            </ul>
+          <div className="space-y-3">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Design Process</h2>
+            <p className="text-base leading-7 text-stone-600">
+              We used a focused, user-centered process to move from problem discovery
+              to a tested prototype within four weeks.
+            </p>
           </div>
 
-          <div>
-            <h3 className='font-medium'>Week 3 · Design</h3>
-            <ul className='list-disc pl-6'>
-              <li>Designed low-fidelity wireframes.</li>
-              <li>Created high-fidelity interfaces and reusable components.</li>
-              <li>Refined layouts through design reviews and feedback.</li>
-            </ul>
-          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <article className="rounded-xl border border-stone-200 bg-white/60 p-5">
+              <p className="text-xs font-medium uppercase tracking-wider text-amber-600">Week 1</p>
+              <h3 className="mt-1 font-semibold">Discover</h3>
+              <p className="mt-2 leading-6 text-stone-600">
+                Studied dyslexia, accessible reading practices, and gaps in existing
+                learning products.
+              </p>
+            </article>
 
-          <div>
-            <h3 className='font-medium'>Week 4 · Prototype & Validate</h3>
-            <ul className='list-disc pl-6'>
-              <li>Conducted usability testing with 25 participants using task-based scenarios.</li>
-              <li>Built an interactive prototype in Figma.</li>
-              <li>Conducted usability testing and documented findings.</li>
-              <li>Iterated on the design before the final competition submission.</li>
-            </ul>
+            <article className="rounded-xl border border-stone-200 bg-white/60 p-5">
+              <p className="text-xs font-medium uppercase tracking-wider text-amber-600">Week 2</p>
+              <h3 className="mt-1 font-semibold">Define</h3>
+              <p className="mt-2 leading-6 text-stone-600">
+                Surveyed 16 participants, mapped recurring themes, and prioritized the
+                core problem and features.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-stone-200 bg-white/60 p-5">
+              <p className="text-xs font-medium uppercase tracking-wider text-amber-600">Week 3</p>
+              <h3 className="mt-1 font-semibold">Design</h3>
+              <p className="mt-2 leading-6 text-stone-600">
+                Developed user flows, wireframes, high-fidelity screens, and reusable
+                interface components.
+              </p>
+            </article>
+
+            <article className="rounded-xl border border-stone-200 bg-white/60 p-5">
+              <p className="text-xs font-medium uppercase tracking-wider text-amber-600">Week 4</p>
+              <h3 className="mt-1 font-semibold">Prototype and Validate</h3>
+              <p className="mt-2 leading-6 text-stone-600">
+                Built the Figma prototype, tested it with 25 participants, and refined
+                the design from the findings.
+              </p>
+            </article>
           </div>
         </section>
 
-        <section className='space-y-2'>
-          <h2 className='text-2xl'>Initial Assumption</h2>
-
-          <p className=''>
-            Children with dyslexia need a learning experience that reduces reading
-            frustration and builds confidence through accessible, engaging, and
-            supportive interactions.
+        <section className="space-y-4">
+          <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">The Problem</h2>
+          <p className="text-base leading-7 text-stone-600">
+            We began with the hypothesis that children with dyslexia need a learning
+            experience that reduces frustration and builds confidence through clear,
+            supportive interactions. We also suspected that mainstream learning
+            products rarely account for dyslexia-related accessibility needs.
           </p>
-
-          <p className=''>
-            Before conducting research, we assumed that many existing digital learning
-            platforms were not designed with the accessibility needs of children with
-            dyslexia in mind.
-          </p>
-
-          <p className=''>
-            To validate these assumptions, we reviewed existing solutions, conducted
-            secondary research, and interviewed users to better understand their
-            challenges, behaviors, and unmet needs.
+          <p className="text-base leading-7 text-stone-600">
+            Secondary research, a competitor review, and survey responses helped us
+            turn those assumptions into concrete design priorities: reduce cognitive
+            load, make reading support adjustable, and keep practice motivating.
           </p>
         </section>
 
-        <section>
-          <h2 className='text-2xl'>Competitive Research</h2>
-
-          <p className=''>
-            We reviewed existing learning solutions to understand how they support
-            children with reading difficulties and where they fall short. The analysis
-            revealed that available solutions often provide either personalized
-            guidance or convenient access, but rarely combine accessibility,
-            engagement, and dyslexia-focused learning in one experience.
-          </p>
+        <section className="space-y-5">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
+              Competitive Research
+            </h2>
+            <p className="text-base leading-7 text-stone-600">
+            We compared private tutoring, conventional learning books, general reading
+            apps, and digital education platforms. Each addressed part of the problem,
+            but with a trade-off: personalized support could be costly, books offered
+            limited adaptability, and digital products were rarely designed
+            specifically for dyslexia.
+            </p>
+          </div>
 
           <ImageViewer
             src="/bibo/bibo-competive-research.webp"
             alt="Competitive research comparison"
             downloadName="bibo-competitive-research.webp"
           />
+
+          <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 sm:p-6">
+            <p className="text-xs font-medium uppercase tracking-wider text-amber-700">
+              Key opportunity
+            </p>
+            <p className="mt-2 text-base leading-7 text-stone-700">
+              Bring accessible reading support, low-pressure practice, and simple parent
+              progress tracking together in one experience.
+            </p>
+          </div>
         </section>
 
-
-
-        <section>
-          <h2 className='text-2xl'>Key Opportunity</h2>
-
-          <p className=''>
-            Existing solutions do not fully combine personalized reading support,
-            accessibility features, interactive learning, and parental progress
-            monitoring. This created an opportunity for Bibo to provide a more
-            accessible and supportive reading experience for children with dyslexia.
-          </p>
-        </section>
-
-        <section className="space-y-2">
-          <h2 className="text-2xl">Our Solution</h2>
-
-          <p className="">
-            Based on our research findings, we designed Bibo around three core
-            principles: reducing cognitive load, improving reading accessibility, and
-            creating a more engaging learning experience for children with dyslexia.
-          </p>
-
-          <ImageViewer
-            src="/bibo/bibo-solution.webp"
-            alt="Core solution"
-            downloadName="bibo-core-solution.webp"
-          />
-        </section>
-
-        <section className="space-y-2">
-          <h2 className="text-2xl">Personas</h2>
-
-          <p className="">
-            Our research identified two primary user groups: children with dyslexia,
-            who require an accessible and engaging learning experience, and parents,
-            who need simple tools to monitor their child's learning progress.
-          </p>
-
-          <ImageViewer
-            src="/bibo/personas.webp"
-            alt="User personas"
-            downloadName="bibo-user-personas.webp"
-          />
-        </section>
-
-        <section className="space-y-2">
-          <h2 className="text-2xl">User Journey</h2>
-
-          <p className="">
-            Mapping the learning journey helped us understand how children and parents
-            interact with the application, uncover pain points, and identify
-            opportunities to improve the overall experience.
-          </p>
+        <section className="space-y-5">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">User Journey</h2>
+            <p className="text-base leading-7 text-stone-600">
+            We mapped the end-to-end experience from onboarding and an initial learning
+            assessment to practice activities, progress tracking, and ongoing support.
+            The journey highlighted where children might feel overwhelmed and where
+            parents needed clearer feedback.
+            </p>
+          </div>
 
           <ImageViewer
             src="/bibo/bibo-user-journey.webp"
@@ -191,84 +162,112 @@ export default function Bibo() {
           />
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl">Features</h2>
+        <section className="space-y-10">
+          <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Core Features</h2>
 
-          <h3 className="font-medium">Feature #1</h3>
-          <p>Create a gamification</p>
-          <ImageViewer src='/bibo/bibo-feature-1.webp' alt='Feature #1' />
+          <article className="space-y-4">
+            <div className="space-y-2">
+              <p className="text-xs font-medium uppercase tracking-wider text-amber-600">
+                Feature 01
+              </p>
+              <h3 className="text-lg font-semibold">Gamified Reading Practice</h3>
+              <p className="text-base leading-7 text-stone-600">
+                Short games turn repetition into approachable practice. Word completion,
+                matching, sentence building, and memory exercises provide variety, while
+                immediate feedback gives children a clear sense of progress.
+              </p>
+            </div>
+            <ImageViewer
+              src="/bibo/bibo-feature-1.webp"
+              alt="Gamified word completion and reading activities in Bibo"
+              downloadName="bibo-gamified-reading.webp"
+            />
+          </article>
 
-          <ImageViewer
-            src="/bibo/final-design.webp"
-            alt="Final design"
-            downloadName="bibo-final-design.webp"
-          />
+          <article className="space-y-4">
+            <div className="space-y-2">
+              <p className="text-xs font-medium uppercase tracking-wider text-amber-600">
+                Feature 02
+              </p>
+              <h3 className="text-lg font-semibold">Adjustable Reading Support</h3>
+              <p className="text-base leading-7 text-stone-600">
+                Children can simplify text, highlight similar letters and key words,
+                switch to OpenDyslexic, and adjust font size or spacing. These controls
+                let each child shape the reading view around their needs.
+              </p>
+            </div>
+            <ImageViewer
+              src="/bibo/bibo-feature-2.webp"
+              alt="Bibo reading view with highlighting and adjustable typography settings"
+              downloadName="bibo-adjustable-reading-support.webp"
+            />
+          </article>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl">Usability Testing</h2>
-
-          <p>
-            We conducted usability testing with 25 participants to evaluate the app’s
-            ease of use, identify interaction issues, and validate our design decisions
-            before the final submission.
-          </p>
-
-          <div className="grid grid-cols-3 py-8">
-            <div className="text-center">
-              <h3 className="text-green-500 font-semibold text-4xl">100%</h3>
-              <p>Task success rate</p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="font-semibold text-4xl">0%</h3>
-              <p>Drop-off rate</p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-yellow-500 font-semibold text-4xl">11.7%</h3>
-              <p>Average misclick rate</p>
-            </div>
+        <section className="space-y-6">
+          <div className="space-y-3">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">
+              Usability Testing
+            </h2>
+            <p className="text-base leading-7 text-stone-600">
+            We tested the interactive prototype with 25 participants using task-based
+            scenarios. We measured completion, drop-off, and misclicks to identify where
+            the interface created friction before the final submission.
+            </p>
           </div>
 
-          <p>
-            The testing results helped us identify several usability issues that needed
-            refinement before finalizing the prototype.
-          </p>
+          <dl className="grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-stone-200 bg-white/60 p-5 text-center">
+              <dd className="text-3xl font-semibold text-emerald-500">100%</dd>
+              <dt className="mt-1 text-sm text-stone-600">Task success</dt>
+            </div>
+            <div className="rounded-xl border border-stone-200 bg-white/60 p-5 text-center">
+              <dd className="text-3xl font-semibold">0%</dd>
+              <dt className="mt-1 text-sm text-stone-600">Drop-off</dt>
+            </div>
+            <div className="rounded-xl border border-stone-200 bg-white/60 p-5 text-center">
+              <dd className="text-3xl font-semibold text-amber-500">11.7%</dd>
+              <dt className="mt-1 text-sm text-stone-600">Average misclicks</dt>
+            </div>
+          </dl>
 
-          <div>
-            <h3 className="font-medium">Larger Touch Targets</h3>
-            <p>
-              The misclick rate showed that some interactive elements were too small or
-              placed too close together. We increased their touch target size and
-              adjusted the spacing to make them easier for children to select.
+          <div className="rounded-xl border border-stone-200 bg-white/60 p-5 sm:p-6">
+            <p className="text-xs font-medium uppercase tracking-wider text-amber-600">
+              Design iteration
+            </p>
+            <h3 className="mt-1 font-semibold">Larger touch targets</h3>
+            <p className="mt-2 leading-6 text-stone-600">
+              Although every participant completed the tasks, the misclick rate showed
+              that some controls were too small or too close together. We enlarged the
+              touch targets and increased spacing to reduce accidental taps.
             </p>
           </div>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl">Outcome</h2>
-
-          <p className="">
-            Bibo received 3rd Place among 105 participating teams. More importantly,
-            the project demonstrated how accessibility-focused design can improve the
-            learning experience for children with dyslexia while supporting parents
-            throughout the process.
+        <section className="rounded-2xl bg-amber-300 p-6 text-stone-900 sm:p-8">
+          <p className="text-xs font-medium uppercase tracking-wider">Outcome</p>
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+            3rd place among 105 teams
+          </h2>
+          <p className="mt-3 text-base leading-7 text-stone-700">
+            More importantly, Bibo demonstrated how accessibility principles can guide
+            a learning product from early research through validation while balancing
+            the needs of children and parents.
           </p>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-2xl">Reflection</h2>
-
-          <p className="">
-            This project strengthened my understanding of accessibility-first design
-            and reinforced the importance of validating assumptions through research
-            and usability testing. Given more time, I would collaborate with educators
-            and dyslexia specialists to further refine the learning experience and
-            expand the product beyond its initial prototype.
+        <section className="space-y-4 border-t border-stone-300 pt-10">
+          <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Reflection</h2>
+          <p className="text-base leading-7 text-stone-600">
+            This project deepened my understanding of accessibility-first design and
+            reinforced that accessibility should shape content, interactions, and
+            feedback from the start. It should not be added at the end. With more time, I would
+            collaborate with educators and dyslexia specialists, test with children and
+            parents over a longer period, and measure Bibo’s effect on reading confidence
+            and learning outcomes.
           </p>
         </section>
-      </div>
+      </main>
     </div>
   )
 }

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'Roboto Var';
   src: url('./fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
